@@ -2,9 +2,12 @@
   "name": "webapp",
   "version": "1.0.0",
   "description": "Web Applications with Node.js and Express",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "debug": "set DEBUG=* & node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,9 @@
   },
   "homepage": "https://github.com/ramses2099/webapp#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "chalk": "^5.1.2",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   }
 }
