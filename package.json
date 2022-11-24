@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ramses2099/webapp/issues"
   },
-  "homepage": "https://github.com/ramses2099/webapp#readme"
+  "homepage": "https://github.com/ramses2099/webapp#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
