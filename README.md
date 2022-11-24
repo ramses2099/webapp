@@ -23,5 +23,7 @@ npm install chalk
 npm install debug
 npm install morgan
 
-
+# Setting up Tooling
+- install Nodemon
+npm install nodemon
 

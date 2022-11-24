@@ -7,7 +7,7 @@ import  path  from 'path';
 
 const debugs = debug('app');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 })
 
-app.listen(port, () => {
-    debugs(`Example app listening on port ${chalk.green(port)}`);
+app.listen(PORT, () => {
+    debugs(`webapp listening on port ${chalk.green(PORT)}`);
 })
