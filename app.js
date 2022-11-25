@@ -15,11 +15,15 @@ const __dirname = path.dirname(__filename);
 //
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname,'/public/')));
+//
 
-debugs(path.join(__dirname,'/public/'));
+//set variable views
+app.set('views','./src/views');
+app.set('view engine','ejs');
+
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('index',{title:'test', data:['a','b','c']});
 })
 
 app.listen(PORT, () => {

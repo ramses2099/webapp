@@ -27,3 +27,9 @@ npm install morgan
 - install Nodemon
 npm install nodemon
 
+# Templating Engines
+- EJS
+npm install ejs
+
+
+
