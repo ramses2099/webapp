@@ -31,5 +31,28 @@ npm install nodemon
 - EJS
 npm install ejs
 
-# creacion de router
+# Using Routing to Build Multiple Pages
+"""
+    Building a web application
+    Build Router of Our Application
+    Separating Files
+    Parameter Variables
+ """
+
+# Connecting to a Database
+"""
+    Using MongoDB
+    Inserting data
+    Querying data
+    Setting up mongodb
+    DBName Globomantics
+    UserName dbUser
+    PWD hWuoqA1Hy1Iwa3Ae
+    IP 200.88.113.114/32
+
+   mongodb+srv://dbUser:<password>@globomantics.s0ve7g1.mongodb.net/?retryWrites=true&w=majority
+
+   install mongodb
+   npm install mongodb
+ """
 

@@ -4,6 +4,8 @@ import chalk  from 'chalk';
 import morgan from 'morgan';
 import { fileURLToPath } from 'url';
 import  path  from 'path';
+import { sessionsRouter } from './src/routers/sessionsRouter.js';
+import { adminRouter } from './src/routers/adminRouter.js';
 
 const debugs = debug('app');
 const app = express();
@@ -11,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const sessionRouter = express.Router();
+
 
 //
 app.use(morgan('tiny'));
@@ -23,16 +25,9 @@ app.set('views','./src/views');
 app.set('view engine','ejs');
 //
 
-sessionRouter.route('/').get((req, res)=>{
-  res.send('hello sessions');
-});
-
-sessionRouter.route('/1').get((req, res)=>{
-  res.send('single session');
-});
-
 //router
-app.use('/sessions', sessionRouter);
+app.use('/sessions', sessionsRouter);
+app.use('/admin', adminRouter);
 
 
 app.get('/', (req, res) => {
