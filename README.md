@@ -56,3 +56,17 @@ npm install ejs
    npm install mongodb
  """
 
+# Securing Your Application
+"""
+    - Creating Users
+    - Authentication
+    - Authorization
+    - Passport
+
+    install passport
+    npm i passport
+    npm i cookie-parser
+    npm i express-session
+
+
+"""

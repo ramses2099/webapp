@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import  path  from 'path';
 import { sessionsRouter } from './src/routers/sessionsRouter.js';
 import { adminRouter } from './src/routers/adminRouter.js';
+import { authRouter } from './src/routers/authRouter.js';
 
 const debugs = debug('app');
 const app = express();
@@ -18,6 +19,8 @@ const __dirname = path.dirname(__filename);
 //
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname,'/public/')));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 //
 
 //set variable views
@@ -28,6 +31,7 @@ app.set('view engine','ejs');
 //router
 app.use('/sessions', sessionsRouter);
 app.use('/admin', adminRouter);
+app.use('/auth', authRouter);
 
 
 app.get('/', (req, res) => {
