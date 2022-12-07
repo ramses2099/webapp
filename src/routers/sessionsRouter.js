@@ -8,6 +8,14 @@ const dbName = 'globomantics';
 
 const sessionsRouter = express.Router();
 
+sessionsRouter.use((req, res, next)=>{
+    if(req.user){
+        next();
+    }else{
+        res.redirect('/aut/signIn');
+    }
+});
+
 sessionsRouter.route('/').get((req, res)=>{
 
     let client;
